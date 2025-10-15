@@ -9,13 +9,14 @@ import { UsoCorrecto } from './pages/uso-correcto/uso-correcto';
 import { VentajasDesventajas } from './pages/ventajas-desventajas/ventajas-desventajas';
 
 export const routes: Routes = [
-    {path:"",component:Home},
-    {path:"home",component:Home},
-    {path:"confusiones",component:Confusiones},
-    {path:"galeria",component:Galeria},
-    {path:"impacto laboral",component:ImpactoLaboral},
-    {path:"info general",component:InfoGeneral},
-    {path:"problematicas",component:Problematicas},
-    {path:"uso correcto",component:UsoCorrecto},
-    {path:"ventajas y desventajas",component:VentajasDesventajas}
+  { path: '', component: Home, pathMatch: 'full' },
+  { path: 'home', component: Home },
+  { path: 'confusiones', component: Confusiones },
+  { path: 'galeria', component: Galeria },
+  { path: 'impacto-laboral', component: ImpactoLaboral },
+  { path: 'info-general', component: InfoGeneral },
+  { path: 'problematicas', component: Problematicas },
+  { path: 'uso-correcto', component: UsoCorrecto },
+  { path: 'ventajas-desventajas', component: VentajasDesventajas },
+  { path: '**', redirectTo: '' }
 ];
