@@ -1,6 +1,6 @@
 /* === ESTILO GENERAL === */
 body {
-  background-color: #f8f9fa;
+  background: linear-gradient(to bottom, #ffffff, #e0f0ff); /* blanco a azul muy claro */
   font-family: 'Poppins', sans-serif;
   color: #222;
   margin: 0;
@@ -15,14 +15,14 @@ body {
   overflow: hidden;
   margin: 40px auto;
   max-width: 1000px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 30px rgba(0,0,50,0.3); /* sombra azul suave */
 }
 
 .card.text-bg-dark img {
   width: 100%;
   height: 400px;
   object-fit: cover;
-  filter: brightness(60%);
+  filter: brightness(55%);
 }
 
 .card.text-bg-dark .card-img-overlay {
@@ -32,7 +32,7 @@ body {
   align-items: center;
   text-align: center;
   color: #fff;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,100,0.35); /* overlay azul translúcido */
 }
 
 .card.text-bg-dark .card-title {
@@ -40,11 +40,13 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 10px;
+  color: #0d6efd; /* azul IA */
 }
 
 .card.text-bg-dark .card-text {
   font-size: 1.2rem;
   font-style: italic;
+  color: #e0f0ff; /* azul claro para texto */
 }
 
 /* === CARDS === */
@@ -61,14 +63,15 @@ body {
   border-radius: 15px;
   border: none;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,100,0.15); /* sombra azul */
   flex: 1 1 calc(25% - 1.5rem);
   min-width: 220px;
+  background: #f0f8ff; /* azul muy claro */
 }
 
 .card.text-bg-light:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0,0,100,0.25); /* sombra azul más intensa */
 }
 
 .card.text-bg-light .card-body {
@@ -78,122 +81,21 @@ body {
 
 .card.text-bg-light .card-title {
   font-weight: 600;
-  color: #e63946; /* tono rojizo para representar advertencia/problemática */
+  color: #0d6efd; /* azul IA brillante */
   margin-bottom: 10px;
 }
 
 .card.text-bg-light .card-text {
-  color: #555;
+  color: #333; /* texto oscuro para contraste */
   font-size: 0.95rem;
 }
 
 /* === RESPONSIVE === */
-
-  .container-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card.text-bg-light {
-    width: 90%;
-  }
-
-/* === ESTILO GENERAL === */
-body {
-  background-color: #f8f9fa;
-  font-family: 'Poppins', sans-serif;
-  color: #222;
-  margin: 0;
-  padding: 0;
-}
-
-/* === PORTADA PRINCIPAL === */
-.card.text-bg-dark {
-  position: relative;
-  border: none;
-  border-radius: 20px;
-  overflow: hidden;
-  margin: 40px auto;
-  max-width: 1000px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-.card.text-bg-dark img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  filter: brightness(60%);
-}
-
-.card.text-bg-dark .card-img-overlay {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  background: rgba(0,0,0,0.3);
-}
-
-.card.text-bg-dark .card-title {
-  font-size: 2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.card.text-bg-dark .card-text {
-  font-size: 1.2rem;
-  font-style: italic;
-}
-
-/* === CARDS === */
 .container-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 50px auto;
-  max-width: 1000px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card.text-bg-light {
-  border-radius: 15px;
-  border: none;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  flex: 1 1 calc(25% - 1.5rem);
-  min-width: 220px;
+  width: 90%;
 }
-
-.card.text-bg-light:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.card.text-bg-light .card-body {
-  text-align: center;
-  padding: 20px;
-}
-
-.card.text-bg-light .card-title {
-  font-weight: 600;
-  color: #e63946; /* tono rojizo para representar advertencia/problemática */
-  margin-bottom: 10px;
-}
-
-.card.text-bg-light .card-text {
-  color: #555;
-  font-size: 0.95rem;
-}
-
-/* === RESPONSIVE === */
-
-  .container-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card.text-bg-light {
-    width: 90%;
-  }
