@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
 import { Home } from './pages/home/home';
-import { Confusiones } from './pages/confusiones/confusiones';
-import { Galeria } from './pages/galeria/galeria';
-import { ImpactoLaboral } from './pages/impacto-laboral/impacto-laboral';
-import { InfoGeneral } from './pages/info-general/info-general';
 import { Problematicas } from './pages/problematicas/problematicas';
-import { UsoCorrecto } from './pages/uso-correcto/uso-correcto';
+import { ImpactoLaboral } from './pages/impacto-laboral/impacto-laboral';
 import { VentajasDesventajas } from './pages/ventajas-desventajas/ventajas-desventajas';
+import { InfoGeneral } from './pages/info-general/info-general';
+import { Confusiones } from './pages/confusiones/confusiones';
+import { UsoCorrecto } from './pages/uso-correcto/uso-correcto';
+import { Galeria } from './pages/galeria/galeria';
 
 export const routes: Routes = [
   { path: '', component: Home, pathMatch: 'full' },
