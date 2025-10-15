@@ -1,0 +1,100 @@
+/* === ESTILO GENERAL === */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* === PORTADA PRINCIPAL === */
+.card.text-bg-dark {
+  position: relative;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 40px auto;
+  max-width: 1000px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.card.text-bg-dark img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  filter: brightness(55%);
+}
+
+.card.text-bg-dark .card-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background: rgba(0,0,0,0.35);
+}
+
+.card.text-bg-dark .card-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.card.text-bg-dark .card-text {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+/* === CARDS === */
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 50px auto;
+  max-width: 1000px;
+}
+
+.card.text-bg-light {
+  border-radius: 15px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex: 1 1 calc(25% - 1.5rem);
+  min-width: 220px;
+}
+
+.card.text-bg-light:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card.text-bg-light .card-body {
+  text-align: center;
+  padding: 20px;
+}
+
+.card.text-bg-light .card-title {
+  font-weight: 600;
+  color: #1e90ff; /* tono azul profesional para tema laboral */
+  margin-bottom: 10px;
+}
+
+.card.text-bg-light .card-text {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* === RESPONSIVE === */
+
+  .container-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card.text-bg-light {
+    width: 90%;
+  }
