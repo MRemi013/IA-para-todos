@@ -9,12 +9,14 @@ import { UsoCorrecto } from './pages/uso-correcto/uso-correcto';
 import { Galeria } from './pages/galeria/galeria';
 
 export const routes: Routes = [
-  { path: '', component: Home },
-  { path: 'problematicas', component: Problematicas },
-  { path: 'impacto-laboral', component: ImpactoLaboral },
-  { path: 'ventajas-desventajas', component: VentajasDesventajas },
-  { path: 'info-general', component: InfoGeneral },
+  { path: '', component: Home, pathMatch: 'full' },
+  { path: 'home', component: Home },
   { path: 'confusiones', component: Confusiones },
+  { path: 'galeria', component: Galeria },
+  { path: 'impacto-laboral', component: ImpactoLaboral },
+  { path: 'info-general', component: InfoGeneral },
+  { path: 'problematicas', component: Problematicas },
   { path: 'uso-correcto', component: UsoCorrecto },
-  { path: 'galeria', component: Galeria }
+  { path: 'ventajas-desventajas', component: VentajasDesventajas },
+  { path: '**', redirectTo: '' }
 ];
