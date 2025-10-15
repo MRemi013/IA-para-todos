@@ -16,5 +16,5 @@ import { VentajasDesventajas } from './pages/ventajas-desventajas/ventajas-desve
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('IA');
+  protected readonly title = signal('IA');
 }
