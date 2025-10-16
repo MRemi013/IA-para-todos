@@ -1,27 +1,91 @@
- .gallery-title {
-      text-align: center;
-      margin: 2rem 0;
-      font-size: 2rem;
-      font-weight: bold;
-      color: #333;
-    }
+/* === FONDO GENERAL === */
+body {
+  background: radial-gradient(circle at top left, #1a0033, #0a0020 60%);
+  color: #86f1f5;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  
+}
 
-    .card {
-      margin-bottom: 2rem;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+/* Opcional: contenedor general si tu HTML lo tiene */
+.main-container {
+  background: linear-gradient(135deg, rgba(58, 12, 163, 0.15), rgba(0, 229, 255, 0.08));
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: 0 0 40px rgba(90, 0, 255, 0.2);
+}
 
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
+/* Mantiene tu CSS existente sin cambios */
+.gallery-title {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5a00ff; /* Violeta brillante que destaca */
+  text-shadow: 0 0 10px rgba(90, 0, 255, 0.4);
+}
 
-    .card-img-top {
-      height: 200px;
-      object-fit: cover;
-    }
+.card {
+  margin-bottom: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
 
-    .card-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.4);
+  background: linear-gradient(145deg, #3a0ca3, #4361ee); /* Degradado violeta-azul eléctrico */
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  filter: brightness(90%) saturate(120%);
+}
+
+.card-body {
+  text-align: center;
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #00e5ff; /* Cian brillante */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #000000;
+}
+
+/* === Efecto de iluminación al pasar el mouse === */
+.card:hover .card-title {
+  color: #80ffdb; /* Verde agua neón */
+  text-shadow: 0 0 8px rgba(128, 255, 219, 0.8);
+}
+
+.card:hover .card-text {
+  color: #fff;
+}
+
+/* === Ajustes para dispositivos pequeños === */
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 1.7rem;
+  }
+  .card {
+    margin-bottom: 1.5rem;
+  }
+}

@@ -58,6 +58,9 @@ body {
   gap: 1.5rem;
   margin: 50px auto;
   max-width: 1000px;
+   transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(0, 229, 255, 0.4);
+    background: linear-gradient(145deg, #4cc9f0, #7209b7);
 }
 
 .card.text-bg-light {
