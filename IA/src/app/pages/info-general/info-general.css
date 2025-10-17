@@ -1,0 +1,129 @@
+/* === ESTILO GENERAL === */
+* {
+  box-sizing: border-box;
+  will-change: transform, opacity;
+}
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(135deg, #0a0020, #1a0033 70%, #001f3f);
+  color: #e0e0e0;
+  padding: 2rem;
+  transform: translateZ(0);
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  background: rgba(10, 0, 40, 0.6);
+  border-radius: 20px;
+  box-shadow: inset 0 0 40px rgba(0, 229, 255, 0.2);
+  backdrop-filter: blur(6px);
+}
+
+/* === TÍTULO PRINCIPAL === */
+.container h3 {
+  text-align: center;
+  color: #00e5ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
+  margin-bottom: 1.5rem;
+}
+
+/* === TARJETAS (DETAILS) === */
+details {
+  background: linear-gradient(145deg, #3a0ca3, #4361ee);
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  border-radius: 15px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 255, 255, 0.15);
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+details:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 229, 255, 0.3);
+}
+
+/* === CABECERA (SUMMARY) === */
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #00e5ff;
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: "›";
+  font-size: 1.3rem;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+  color: #00e5ff;
+}
+
+/* === ANIMACIÓN AL ABRIR === */
+details[open] summary::after {
+  transform: rotate(90deg);
+}
+details[open] {
+  background: linear-gradient(145deg, #4cc9f0, #7209b7);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.4);
+  border-color: rgba(0, 229, 255, 0.6);
+}
+
+/* === CONTENIDO INTERNO === */
+details p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+  color: #000000;
+  font-size: 0.95rem;
+  animation: fadeIn 0.4s ease;
+}
+
+details[open] p strong {
+  color: #00e5ff;
+}
+
+/* === ANIMACIONES === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+  summary {
+    font-size: 1rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
