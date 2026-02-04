@@ -1,0 +1,147 @@
+/* === CONTENEDOR DE CARDS DENTRO DEL CAROUSEL === */
+* {
+  will-change: transform, opacity;
+}
+
+body {
+  transform: translateZ(0);
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  flex-wrap: wrap;
+  /* Fondo con la gama del home (violeta - azul - cian) */
+  background: linear-gradient(135deg, #1a0033, #0a0020 60%, #001f3f);
+  color: #fff;
+  box-shadow: inset 0 0 40px rgba(0, 229, 255, 0.2);
+  border-radius: 20px;
+}
+
+/* === CARDS === */
+.cards-container .card {
+  width: 18rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+  background: linear-gradient(145deg, #3a0ca3, #4361ee);
+  /* violeta-azul eléctrico */
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  color: #fff;
+}
+
+/* === EFECTO HOVER === */
+.cards-container .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0, 229, 255, 0.4);
+  background: linear-gradient(145deg, #4cc9f0, #7209b7);
+}
+
+/* === IMAGEN DE LA CARD === */
+.cards-container .card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 200px;
+  object-fit: cover;
+  filter: brightness(90%) saturate(120%);
+}
+
+/* === TÍTULO === */
+.cards-container .card-title {
+  color: #00e5ff;
+  /* Cian brillante */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
+}
+
+/* === TEXTO === */
+.cards-container .card-text {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+}
+
+/* === BOTÓN === */
+.cards-container .btn-primary {
+  background: linear-gradient(90deg, #3a0ca3, #4361ee);
+  border: none;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+}
+
+.cards-container .btn-primary:hover {
+  background: linear-gradient(90deg, #00e5ff, #7209b7);
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
+  contain: layout paint;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+
+/* Ajuste del carrusel */
+#carouselExampleCaptions {
+  max-width: 95%;
+  /* ocupa casi todo el ancho */
+  margin: 0 auto;
+  /* centrado horizontal */
+  border-radius: 20px;
+  /* bordes redondeados */
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 50, 0.3);
+  /* sombra elegante */
+}
+
+/* Imágenes */
+#carouselExampleCaptions .carousel-item img {
+  width: 100%;
+  /* ocupa todo el ancho del carrusel */
+  max-height: 500px;
+  /* altura máxima */
+  object-fit: cover;
+  /* mantiene proporción sin deformar */
+}
+
+/* Caption */
+#carouselExampleCaptions .carousel-caption {
+  bottom: 20px;
+  background: rgba(0, 0, 50, 0.4);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #carouselExampleCaptions {
+    max-width: 100%;
+  }
+
+  #carouselExampleCaptions .carousel-item img {
+    width: 100%;
+    max-height: 300px;
+  }
+
+  #carouselExampleCaptions .carousel-caption {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
